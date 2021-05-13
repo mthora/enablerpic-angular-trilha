@@ -10,13 +10,13 @@ import { HomeRoutingModule } from './home.routing.module';
 import { SignUpService } from './singup/signup.service';
 
 @NgModule({
-    declarations: [ 
+    declarations: [
         SignInComponent,
         SignUpComponent,
         HomeComponent
     ],
-    imports: [ 
-        CommonModule, 
+    imports: [
+        CommonModule,
         FormsModule,
         ReactiveFormsModule,
         VMessageModule,
