@@ -12,7 +12,7 @@ import { UserService } from "../../core/user/user.service";
 @Component({
     templateUrl: './photo-details.component.html'
 })
-export class PhotoDetailsComponent implements OnInit { 
+export class PhotoDetailsComponent implements OnInit {
 
     photo$: Observable<Photo>;
     photoId: number;

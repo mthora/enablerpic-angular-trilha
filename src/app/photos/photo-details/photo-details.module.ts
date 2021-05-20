@@ -11,12 +11,12 @@ import { ShowIfLoggedModule } from "../../shared/directives/show-if-logged/show-
 
 @NgModule({
     declarations: [
-        PhotoDetailsComponent, 
+        PhotoDetailsComponent,
         PhotoCommentsComponent,
         PhotoOwnerOnlyDirective
     ],
     exports: [
-        PhotoDetailsComponent, 
+        PhotoDetailsComponent,
         PhotoCommentsComponent
     ],
     imports: [

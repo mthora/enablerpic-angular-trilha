@@ -8,32 +8,32 @@ import { SignUpComponent } from './singup/singup.component';
 import { LoginGuard } from '../core/auth/login.guard';
 
 const routes: Routes = [
-    { 
+    {
         path: '',
         component: HomeComponent,
         canActivate: [LoginGuard],
         children: [
-            { 
+            {
                 path: '',
                 component: SignInComponent,
                 data: {
                     title: 'Sign in'
                 }
-            }, 
-            { 
+            },
+            {
                 path: 'signup',
                 component: SignUpComponent,
                 data: {
                     title: 'Sign up'
                 }
-            },            
+            },
         ]
-    },              
+    },
 ];
 
 @NgModule({
-    imports: [ 
-        RouterModule.forChild(routes) 
+    imports: [
+        RouterModule.forChild(routes)
     ],
     exports: [ RouterModule ]
 })

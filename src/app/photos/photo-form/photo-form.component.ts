@@ -58,7 +58,7 @@ export class PhotoFormComponent implements OnInit {
           console.log(err);
           this.alertService.danger('Upload error!', true);
         });
-        
+
   }
 
   handleFile(file: File) {

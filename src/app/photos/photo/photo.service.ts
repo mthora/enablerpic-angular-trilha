@@ -17,7 +17,7 @@ export class PhotoService {
 
     listFromUser(userName: string) {
         return this.http
-            .get<Photo[]>(API + '/' + userName + '/photos');       
+            .get<Photo[]>(API + '/' + userName + '/photos');
     }
 
     listFromUserPaginated(userName: string, page: number) {
@@ -25,20 +25,20 @@ export class PhotoService {
             .append('page', page.toString());
 
         return this.http
-            .get<Photo[]>(API + '/' + userName + '/photos', { params });       
-    } 
-    
+            .get<Photo[]>(API + '/' + userName + '/photos', { params });
+    }
+
     upload(description: string, allowComments: boolean, file: File) {
-        
+
         const formData = new FormData();
         formData.append('description', description);
         formData.append('allowComments', allowComments ? 'true' : 'false');
         formData.append('imageFile', file);
 
         return this.http.post(
-            API + '/photos/upload', 
+            API + '/photos/upload',
             formData,
-            { 
+            {
                 observe: 'events',
                 reportProgress: true
             }
@@ -62,7 +62,7 @@ export class PhotoService {
         return this.http.post(
             API + '/photos/' + photoId + '/comments',
             { commentText }
-        );        
+        );
     }
 
     removePhoto(photoId: number) {
